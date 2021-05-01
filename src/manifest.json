@@ -1,15 +1,8 @@
 {
 	"background": {
-		"scripts": ["ExtPay.js", "background.js"],
+		"scripts": ["background.js"],
 		"persistent": true
 	},
-	"content_scripts": [
-        {
-            "matches": ["https://extensionpay.com/*"],
-            "js": ["ExtPay.js"],
-            "run_at": "document_start"
-        }
-    ],
 	"name": "Alt + Q Switch Toggle Most Recent Active Tabs",
 	"description": "Press Alt + Q to quickly switch between your currently active tab and the previously viewed one.",
 	"version": "34",
@@ -30,7 +23,7 @@
 	},
 	"permissions": [
 		"activeTab",
-		"https://extensionpay.com/*",
+		"*://*/*",
         "storage",
 		"notifications"
 	],
